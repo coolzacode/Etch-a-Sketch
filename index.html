@@ -8,8 +8,18 @@
     <script src="app.js" defer></script>
 </head>
 <body>
-    <main class="container">
-        <section class="canvas" id="canvas"></section>
-    </main>
+    <container>
+        <header>
+            <h1>Etch-a-Sketch</h1>
+            <button id="reset-btn" class="btn">Clear</button>
+                <div class="slider">
+                    <span id="size-value">Size: 16 x 16</span>
+                    <input type="range" id="size-slider" min="8" max="64" value="16">
+                </div>
+        </header>
+        <main class="container">
+            <section class="canvas" id="canvas"></section>
+        </main>
+    </container>
 </body>
 </html>
