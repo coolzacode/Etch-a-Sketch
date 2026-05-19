@@ -1,3 +1,23 @@
+/* COLOR VARIABLES */
+:root {
+    /* light mode colors */
+    --site-background: #F1F5F9;
+    --canvas-background: #FFFFFF;
+    --canvas-border: #E2E8F0;
+    --canvas-color: #1E293B;
+    --canvas-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --site-background: #0F172A;
+        --canvas-background: #1E293B;
+        --canvas-border: #334155;
+        --canvas-color: #F8FAFC;
+        --canvas-shadow: 0 4px 6px rgba(148, 163, 184, 0.3);
+    }
+}
+
 /* RESET */
 * {
     margin: 0;
@@ -6,6 +26,7 @@
 }
 
 body {
+    background-color: var(--site-background);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,6 +35,8 @@ body {
 
 /* MAIN CANVAS */
 .canvas {
+    background-color: var(--canvas-background);
+    border: 2px solid var(--canvas-border);
     width: 800px;
     height: 800px;
     display: flex;
