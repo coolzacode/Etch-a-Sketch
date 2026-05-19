@@ -42,3 +42,12 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+
+/* PIXELS */
+.pixel {
+    border: 1px solid var(--canvas-color);
+}
+
+.active-pixel {
+    background-color: var(--canvas-color);
+}
