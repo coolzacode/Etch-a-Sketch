@@ -36,17 +36,18 @@ body {
 
 /* MAIN CANVAS */
 .canvas {
-    background-color: var(--canvas-background);
-    border: 2px solid var(--canvas-border);
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), 1fr);
+    grid-template-rows: repeat(var(--grid-size), 1fr);
     width: 800px;
     height: 800px;
-    display: flex;
-    flex-wrap: wrap;
+    background-color: var(--canvas-background);
+    border: 2px solid var(--canvas-border);
+    user-select: none;
 }
 
 /* PIXELS */
 .pixel {
-    width: calc(100% / var(--grid-size));
     border: 1px solid var(--canvas-color);
     cursor: pointer;
 }
