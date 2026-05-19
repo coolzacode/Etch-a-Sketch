@@ -1,11 +1,10 @@
 const canvas = document.getElementById('canvas');
 
-function makeGrid(rowSize = 16) {
-    const gridSize = rowSize * rowSize;
-    canvas.style.setProperty('--grid-size', rowSize);
+function makeGrid(size = 16) {
+    canvas.style.setProperty('--grid-size', size);
     const fragment = document.createDocumentFragment();
 
-    for (let i = 0; i < gridSize; i++) {
+    for (let i = 0; i < size * size; i++) {
         const newDiv = document.createElement('div');
         newDiv.classList.add('pixel');
         fragment.appendChild(newDiv);

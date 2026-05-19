@@ -5,8 +5,7 @@
     --site-background: #F1F5F9;
     --canvas-background: #FFFFFF;
     --canvas-border: #E2E8F0;
-    --canvas-color: #1E293B;
-    --canvas-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    --pixel-color: #1E293B;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,8 +13,7 @@
         --site-background: #0F172A;
         --canvas-background: #1E293B;
         --canvas-border: #334155;
-        --canvas-color: #F8FAFC;
-        --canvas-shadow: 0 4px 6px rgba(148, 163, 184, 0.3);
+        --pixel-color: #F8FAFC;
     }
 }
 
@@ -42,16 +40,16 @@ body {
     width: 800px;
     height: 800px;
     background-color: var(--canvas-background);
-    border: 2px solid var(--canvas-border);
+    border: 8px solid var(--canvas-border);
     user-select: none;
 }
 
 /* PIXELS */
 .pixel {
-    border: 1px solid var(--canvas-color);
+    border: 0.1px solid var(--canvas-border);
     cursor: pointer;
 }
 
 .active-pixel {
-    background-color: var(--canvas-color);
+    background-color: var(--pixel-color);
 }
