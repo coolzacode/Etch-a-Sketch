@@ -2,14 +2,17 @@ const canvas = document.getElementById('canvas');
 
 function makeGrid(rowSize = 16) {
     const gridSize = rowSize * rowSize;
+    const fragment = document.createDocumentFragment();
+
     for (let i = 0; i < gridSize; i++) {
         const newDiv = document.createElement('div');
         newDiv.classList.add('pixel');
         Object.assign(newDiv.style, {
             width: `calc(100% / ${rowSize})`,
         });
-        canvas.appendChild(newDiv);
+        fragment.appendChild(newDiv);
     }
+    canvas.appendChild(fragment);
 }
 
 function addEventListeners() {
@@ -20,7 +23,6 @@ function addEventListeners() {
         if (!activePixel) return;
 
         activePixel.classList.toggle('active-pixel');
-        console.log("hi");
     })
 }
 
