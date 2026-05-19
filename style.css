@@ -1,5 +1,6 @@
 /* COLOR VARIABLES */
 :root {
+    --grid-size: 16;
     /* light mode colors */
     --site-background: #F1F5F9;
     --canvas-background: #FFFFFF;
@@ -45,6 +46,7 @@ body {
 
 /* PIXELS */
 .pixel {
+    width: calc(100% / var(--grid-size));
     border: 1px solid var(--canvas-color);
     cursor: pointer;
 }
