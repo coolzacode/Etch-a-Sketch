@@ -46,6 +46,7 @@ body {
 /* PIXELS */
 .pixel {
     border: 1px solid var(--canvas-color);
+    cursor: pointer;
 }
 
 .active-pixel {
